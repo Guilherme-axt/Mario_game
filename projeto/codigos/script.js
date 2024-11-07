@@ -1,5 +1,8 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
+const botaoIniciar = document.getElementById('start');
+
+
 
 
 const jump = () => {
@@ -35,6 +38,14 @@ const loop = setInterval(() => {
 
 
 }, 10);
-
-
 document.addEventListener('keydown', jump);
+pipe.classList.add('animarPipe');
+nuvem.classList.add('animarNuvem');
+
+botaoIniciar.addEventListener('click', function() {
+    botaoIniciar.style.display = 'none';
+    nuvem.classList.add('animarNuvem');
+    pipe.classList.add('animarPipe');
+    document.addEventListener('keydown', jump);
+
+})
