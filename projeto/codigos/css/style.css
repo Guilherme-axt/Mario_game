@@ -4,6 +4,51 @@
     box-sizing: border-box;
 }
 
+/* TELA DE INCIO DO JOGO */
+.inicio {
+    display: flex;           
+    align-items: center;     
+    justify-content: center;
+    position: absolute;      
+    width: 100%;             
+    height: 100%;            
+}
+
+#start {
+    width: 550px;
+    position: absolute;
+    bottom: 220px;
+    margin: 0 auto;  
+
+}
+
+/* TELA DE REINICIO */
+.reset {
+    display: flex;           
+    align-items: center;     
+    justify-content: center;
+    position: absolute;      
+    width: 100%;             
+    height: 100%;            
+}
+
+#restart {
+    width: 250px;
+    position: absolute;
+    bottom: 170px;
+    margin: 0 auto;
+    display: none;  
+}
+
+#jogo {
+    width: 550px;
+    position: absolute;
+    bottom: 107px;
+    margin: 0 auto;
+}
+
+
+/* CENARIO */
 .game-board {
     width: 100%;
     height: 500px;
@@ -14,6 +59,8 @@
     background: linear-gradient(#0099ff, #ffffff)
 }
 
+
+/* ELEMENTOS */
 .pipe {
     position: absolute;
     bottom: 0;
@@ -32,36 +79,19 @@
     width: 550px;
     position: absolute;
     bottom: 220px;
-    right: -550px;
+    animation: nuvem-animation 10s infinite linear;
+    
+}
+
+
+/* ANIMCAÇÕES */
+.jump {
+    animation: jump 500ms ease-out;
 }
 
 .animarPipe {
     animation: pipe-animation 1.5s infinite linear;
 }
-
-.animarNuvem {
-    animation: nuvem-animation 10s infinite linear;
-}
-
-.jump {
-    animation: jump 500ms ease-out;
-}
-
-#start {
-    width: 550px;
-    position: absolute;
-    bottom: 220px;
-    margin: 0 auto;
-    
-}
-
-#jogo {
-    width: 550px;
-    position: absolute;
-    bottom: 107px;
-    margin: 0 auto;
-}
-
 
 @keyframes pipe-animation {
     from {
